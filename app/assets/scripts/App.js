@@ -1,1 +1,1 @@
-alert("app working...")
+import '../styles/styles.css';
