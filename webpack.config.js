@@ -1,10 +1,12 @@
 const path = require('path');
 
 const postCSSPlugins = [
+      require('postcss-import'),
+      require('postcss-mixins'),
       require('postcss-simple-vars'),
       require('postcss-nested'),
       require('autoprefixer')
-]
+];
 
 module.exports = {
       entry : "./app/assets/scripts/App.js",
@@ -13,10 +15,23 @@ module.exports = {
             path: path.resolve(__dirname, "app")
       },
 
+
+     // devServer: {
+         //   before: function(app, server){
+             //     server._watch("./app/**/*.html");
+         //   },
+          //  contentBase: path.join(__dirname, 'app'),
+         //   hot: true,
+         //   port: 3000,
+         //   host: "0.0.0.0"
+      //}, 
+
       // shar anhaaruulgiig alga bolgohod ingej bichne
       mode : 'development',
 
       //uurchlult hiih bolgond scriptee ajilluuldag bsniig ugui bolgolooo
+      //watch: true,  ene propertynii orond devServerg ashiglah bolno
+
       watch: true,
       
       module: {
@@ -25,7 +40,7 @@ module.exports = {
                         test: /\.css$/i,
                         use: ["style-loader",
                               "css-loader", 
-                              { loader: "postcss-loader", options: { plugins: postCSSPlugins }}
+                              { loader: 'postcss-loader', options: { postcssOptions: {plugins: postCSSPlugins}  }}
                         ]
                   }
             ]

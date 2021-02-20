@@ -20,7 +20,7 @@
   <body>
     <header>
       <img src="assets/images/icons/platinum_travel.svg" />
-      <a href="#">Хамт аялах</a>
+      <a href="#" class="btn">Хамт аялах</a>
       <nav>
         <ul>
           <li><a href="#our-beginning">Эхлэл</a></li>
@@ -31,11 +31,18 @@
     </header>
 
     <div class="large-hero">
-      <img src="assets/images/hero--large.jpg" />
-      <h1>Таны нандин дурсамж.</h1>
-      <h2>Ганцхан алхам үлдлээ.</h2>
-      <p>Бид таны амьдралыг аз жаргал, адал явдлаар дүүргэх болно.</p>
-      <p><a href="#">Өнөөдөр эхлэе</a></p>
+      <picture>
+        <source srcset="assets/images/hero--large.jpg 1920w, assets/images/hero--large-hi-dpi.jpg 3840w" media="(min-width : 1380px)">
+        <source srcset="assets/images/hero--medium.jpg 1380w,  assets/images/hero--medium-hi-dpi.jpg 2780w" " media="(min-width : 990px)">
+        <source srcset="assets/images/hero--small.jpg 990w,  assets/images/hero--small-hi-dpi.jpg 19800w"" media="(min-width : 640px)">
+        <img srcset="assets/images/hero--smaller.jpg 640w,  assets/images/hero--smaller-hi-dpi.jpg 1280w"" alt="Ocean view"/>
+      </picture>
+      <div class="large-hero__text-content">
+        <h1 class="large-hero__title">Таны нандин дурсамж.</h1>
+        <h2 class="large-hero__subtitle">Ганцхан алхам үлдлээ.</h2>
+        <p class="large-hero__description">Бид таны амьдралыг аз жаргал, адал явдлаар дүүргэх болно.</p>
+        <p><a href="#" class="btn btn--orange btn--large">Өнөөдөр эхлэе</a></p>
+      </div>
     </div>
 
     <div id="our-beginning">
@@ -148,7 +155,7 @@
     <footer>
       <p>
         Copyright &copy; 2019 Platinum Travel. All rights reserved.
-        <a href="#">Хамт аялах</a>
+        <a href="#" class="btn btn--orange">Хамт аялах</a>
       </p>
     </footer>
     <!-- "modal" хичээлийг үзтэлээ энэ тайлбар бүхий хэсгийг битгий нээгээрэй
